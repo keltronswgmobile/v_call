@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 
-import 'package:get/get.dart';
+import './src/pages/index.dart';
 
-import 'app/routes/app_pages.dart';
+void main() => runApp(MyApp());
 
-void main() {
-  runApp(
-    GetMaterialApp(
-      title: "Application",
-      initialRoute: AppPages.INITIAL,
-      getPages: AppPages.routes,
-    ),
-  );
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: IndexPage(),
+    );
+  }
 }
